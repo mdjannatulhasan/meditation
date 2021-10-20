@@ -17,4 +17,5 @@ Route::group([
     Route::crud('slider', 'SliderCrudController');
     Route::crud('category', 'CategoryCrudController');
     Route::crud('event', 'EventCrudController');
+    Route::crud('testimonial', 'TestimonialCrudController');
 }); // this should be the absolute last line of this file
