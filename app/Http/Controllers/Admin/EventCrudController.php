@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\CategoryRequest;
+use App\Http\Requests\EventRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class CategoryCrudController
+ * Class EventCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class CategoryCrudController extends CrudController
+class EventCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class CategoryCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Category::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/category');
-        CRUD::setEntityNameStrings('category', 'categories');
+        CRUD::setModel(\App\Models\Event::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/event');
+        CRUD::setEntityNameStrings('event', 'events');
     }
 
     /**
@@ -41,7 +41,14 @@ class CategoryCrudController extends CrudController
     {
         CRUD::column('id');
         CRUD::column('title');
-        CRUD::column('image');
+        CRUD::column('description');
+        CRUD::column('contribution_fee');
+        CRUD::column('date');
+        CRUD::column('time');
+        CRUD::column('day');
+        CRUD::column('starting_date');
+        CRUD::column('ending_date');
+        CRUD::column('images');
         CRUD::column('created_at');
         CRUD::column('updated_at');
 
@@ -60,11 +67,18 @@ class CategoryCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(CategoryRequest::class);
+        CRUD::setValidation(EventRequest::class);
 
         // CRUD::field('id');
         CRUD::field('title');
-        CRUD::field('image');
+        CRUD::field('description');
+        CRUD::field('contribution_fee');
+        CRUD::field('date');
+        CRUD::field('time');
+        CRUD::field('day');
+        CRUD::field('starting_date');
+        CRUD::field('ending_date');
+        CRUD::field('images');
         // CRUD::field('created_at');
         // CRUD::field('updated_at');
 
