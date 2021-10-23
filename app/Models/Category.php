@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Mutators\ImageMutator;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use CrudTrait;
+    use CrudTrait, ImageMutator;
 
     /*
     |--------------------------------------------------------------------------
