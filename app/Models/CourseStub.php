@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Models\Mutators\ImageMutator;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class CourseStub extends Model
 {
-    use CrudTrait, ImageMutator;
+    use CrudTrait;
 
     /*
     |--------------------------------------------------------------------------
@@ -16,7 +15,7 @@ class Category extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'categories';
+    protected $table = 'course_stubs';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -35,7 +34,14 @@ class Category extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

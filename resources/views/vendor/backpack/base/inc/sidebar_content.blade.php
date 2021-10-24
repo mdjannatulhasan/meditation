@@ -5,3 +5,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('event') }}'><i class='nav-icon la la-question'></i> Events</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('testimonial') }}'><i class='nav-icon la la-question'></i> Testimonials</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('course-stub') }}'><i class='nav-icon la la-question'></i> Course stubs</a></li>
