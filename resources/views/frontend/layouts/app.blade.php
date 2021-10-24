@@ -25,7 +25,7 @@
 
 <body>
 
-
+    @include('frontend.include.header')
     <main>
 
         @yield('content')

@@ -21,6 +21,8 @@ class CreateEventsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->text('description');
             $table->double('contribution_fee');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->date('date')->nullable();
             $table->time('time')->nullable();
             $table->string('day')->nullable();

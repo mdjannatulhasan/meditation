@@ -1,7 +1,6 @@
 @extends('frontend.layouts.app')
 
 @section('title', 'About-us')
-@include('frontend.include.header')
 
 @section('content')
 

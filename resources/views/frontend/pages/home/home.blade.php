@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 
-@include('frontend.pages.home.section.header')
+
 
 @section('content')
 @include('frontend.pages.home.section.hero')

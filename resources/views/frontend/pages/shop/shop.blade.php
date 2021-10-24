@@ -2,7 +2,6 @@
 
 @section('title', 'Shop')
 
-@include('frontend.include.header')
 
 
 @section('content')
