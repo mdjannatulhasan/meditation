@@ -29,6 +29,18 @@ class EventCrudController extends CrudController
         CRUD::setModel(\App\Models\Event::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/event');
         CRUD::setEntityNameStrings('event', 'events');
+
+
+        $this->crud->setColumns(['category']);
+        
+        $this->crud->addField([    // SELECT2
+            'label'         => 'Category',
+            'type'          => 'select',
+            'name'          => 'category_id',
+            'entity'        => 'category',
+            'attribute'     => 'title',
+            // 'model'     => "App\Models\Category", 
+        ]);
     }
 
     /**
@@ -43,6 +55,7 @@ class EventCrudController extends CrudController
         CRUD::column('title');
         CRUD::column('description');
         CRUD::column('contribution_fee');
+        CRUD::column('category_id');
         CRUD::column('date');
         CRUD::column('time');
         CRUD::column('day');
@@ -73,6 +86,7 @@ class EventCrudController extends CrudController
         CRUD::field('title');
         CRUD::field('description');
         CRUD::field('contribution_fee');
+        CRUD::field('category_id');
         CRUD::field('date');
         CRUD::field('time');
         CRUD::field('day');

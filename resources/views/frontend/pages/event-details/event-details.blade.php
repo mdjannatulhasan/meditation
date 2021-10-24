@@ -2,7 +2,6 @@
 
 @section('title', 'Event Details')
 
-@include('frontend.include.header')
 
 @section('content')
 

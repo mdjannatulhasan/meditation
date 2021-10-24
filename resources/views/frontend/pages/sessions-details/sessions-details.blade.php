@@ -1,8 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title', 'Sesssions Details')
-    
-@include('frontend.include.header')
+
 
 @section('content')
 @include('frontend.pages.sessions-details.section.banner')

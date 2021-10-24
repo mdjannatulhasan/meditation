@@ -2,7 +2,6 @@
 
 @section('title', 'Detox')
 
-@include('frontend.include.header')
 
 @section('content')
     

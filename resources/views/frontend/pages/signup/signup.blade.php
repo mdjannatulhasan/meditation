@@ -8,7 +8,7 @@
 	<!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Meditation - Signup') }}</title>
+    <title>{{ config('app.name', 'Meditation') }} - Signup</title>
 	<!------- FONTS ------->
 	<link rel="stylesheet" href="{{ asset('') }}asset/frontend/fonts/fonts.css">
 	<!----- CSS HERE ----->
