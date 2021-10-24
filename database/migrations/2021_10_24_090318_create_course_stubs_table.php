@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIndividualSessionSTable extends Migration
+class CreateCourseStubsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateIndividualSessionSTable extends Migration
      */
     public function up()
     {
-        Schema::create('individual_sessions', function (Blueprint $table) {
+        Schema::create('course_stubs', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->bigInteger('event_id')->unsigned();
             $table->foreign('event_id')->references('id')->on('events');
             $table->softDeletes();
@@ -29,6 +32,6 @@ class CreateIndividualSessionSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('individual_session');
+        Schema::dropIfExists('course_stubs');
     }
 }

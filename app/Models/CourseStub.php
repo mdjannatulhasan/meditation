@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class IndividualSession extends Model
+class CourseStub extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class IndividualSession extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'individual_sessions';
+    protected $table = 'course_stubs';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -38,9 +38,9 @@ class IndividualSession extends Model
     {
         return $this->belongsTo(Event::class);
     }
-    public function session()
+    public function category()
     {
-        return $this->belongsTo(Event::class, 'event_id')->where('category_id',1);
+        return $this->belongsTo(Category::class);
     }
     /*
     |--------------------------------------------------------------------------

@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
-class IndividualSessionRequest extends FormRequest
+class CourseStubRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,8 @@ class IndividualSessionRequest extends FormRequest
     public function rules()
     {
         return [
-             'event_id' => 'required|unique:individual_sessions,event_id,'.request()->id
+            'type' => 'required',
+            'category_id' => 'required'
         ];
     }
 

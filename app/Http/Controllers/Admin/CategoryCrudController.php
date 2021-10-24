@@ -29,6 +29,7 @@ class CategoryCrudController extends CrudController
         CRUD::setModel(\App\Models\Category::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/category');
         CRUD::setEntityNameStrings('category', 'categories');
+        $this->crud->denyAccess(['create', 'delete']);
     }
 
     /**
