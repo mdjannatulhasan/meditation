@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Frontend\HomeController@index');
-Route::get('course-details', 'Frontend\CourseController@index');
+Route::get('course', 'Frontend\CourseController@index');
+Route::get('course-details', 'Frontend\CourseDetailsController@index');
 Route::get('about', 'Frontend\AboutController@index');
 Route::get('body-yoga', 'Frontend\YogaController@index');
 Route::get('contact', 'Frontend\ContactController@index');

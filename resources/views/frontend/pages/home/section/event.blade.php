@@ -4,33 +4,34 @@
             <h2 class="ps-700 s38 c00">Upcoming Event</h2>
         </div>
         <div class="row g-5 event-wrapper">
+            @foreach ($upcoming_events as $upcoming_event)
             <div class="col-lg-4 col-sm-6">
-                <div class="event shadow-2">
-                    <div class="event-img tr">
-                        <img src="{{ asset('') }}asset/frontend/images/event1.png" alt="event">
+               <div class="event shadow-2">
+                <div class="event-img tr">
+                    <img src="{{ asset($upcoming_event->image) }}" alt="event">
+                </div>
+                <div class="event-content">
+                    <div class="event-date-titme d-flex justify-content-between">
+                        <p class="ps-700 s16 c11">
+                            <span class="d-block">{{ $upcoming_event->date }}</span>
+                            <span>({{ $upcoming_event->day }})</span>
+                        </p>
+                        <p class="ps-700 s16 c11">{{ $upcoming_event->time }}</p>
                     </div>
-                    <div class="event-content">
-                        <div class="event-date-titme d-flex justify-content-between">
-                            <p class="ps-700 s16 c11">
-                                <span class="d-block">09 Jan</span>
-                                <span>(Friday)</span>
-                            </p>
-                            <p class="ps-700 s16 c11">12:30 PM</p>
-                        </div>
-                        <div class="event-name">
-                            <h4 class="ps-700 s20 c00">Event Name</h4>
-                        </div>
-                        <div class="event-desc event-desc-1">
-                            <p class="ps-400 s14 c6a">Our modern world is a visual world. We carry cameraphones
-                                everywhere we go, recording our lunches and our pets and our.</p>
-                            <a href="javascript:void(0)" class="ps-700 s18 cff tc mx-auto d-block">Pre-book
-                                Now</a>
-                            <p class="tr s12 ps-400 c99">45 People Booked</p>
-                        </div>
+                    <div class="event-name">
+                        <h4 class="ps-700 s20 c00">{{ $upcoming_event->title }}</h4>
+                    </div>
+                    <div class="event-desc event-desc-1">
+                        <p class="ps-400 s14 c6a">{{ $upcoming_event->description }}</p>
+                        <a href="javascript:void(0)" class="ps-700 s18 cff tc mx-auto d-block">Pre-book
+                            Now</a>
+                        <p class="tr s12 ps-400 c99">45 People Booked</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            </div>
+            @endforeach
+            {{-- <div class="col-lg-4 col-sm-6">
                 <div class="event shadow-2">
                     <div class="event-img tr">
                         <img src="{{ asset('') }}asset/frontend/images/event2.png" alt="event">
@@ -81,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -91,7 +92,7 @@
     Mobail Device Slider 
     ==============================
   -->
-<section class="event-section d-block d-sm-none">
+{{-- <section class="event-section d-block d-sm-none">
     <div class="container p-relative">
         <div class="event-title">
             <h2 class="ps-700 s38 c00">Upcoming Event</h2>
@@ -196,4 +197,4 @@
             </button>
         </div>
     </div>
-</section>
+</section> --}}

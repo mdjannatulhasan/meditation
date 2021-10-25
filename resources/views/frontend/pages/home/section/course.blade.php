@@ -7,14 +7,15 @@
         <!-- Swiper Slider Start -->
         <div class="swiper-container swiper-container1">
             <div class="swiper-wrapper swiper-slide-pb">
+                @foreach ($courses as $course)
                 <div class="swiper-slide">
                     <div class="courses shadow-4 rounded-tt">
                         <div class="courses-img">
-                            <img src="{{ asset('') }}asset/frontend/images/course1.png" alt="courses" class="img">
+                            <img src="{{ asset($course->image) }}" alt="courses" class="img">
                         </div>
                         <div class="courses-content">
                             <div class="courses-name d-flex justify-content-between align-items-center">
-                                <h4 class="ps-700 s22 c00">Jone smith</h4>
+                                <h4 class="ps-700 s22 c00">{{ $course->title }}</h4>
                                 <ul class="d-flex justify-content-between">
                                     <li>
                                         <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
@@ -24,8 +25,7 @@
                             </div>
                             <div class="courses-desc">
                                 <p class="ps-400 s16 c51">
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered alteration
+                                    {{ $course->description }}
                                 </p>
                             </div>
                             <div class="courses-btn">
@@ -34,60 +34,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="courses shadow-4 rounded-tt">
-                        <div class="courses-img">
-                            <img src="{{ asset('') }}asset/frontend/images/course2.png" alt="courses" class="img">
-                        </div>
-                        <div class="courses-content">
-                            <div class="courses-name d-flex justify-content-between align-items-center">
-                                <h4 class="ps-700 s22 c00">JKyla Hiper</h4>
-                                <ul class="d-flex justify-content-between">
-                                    <li>
-                                        <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
-                                    </li>
-                                    <li class="ps-700 s16 c8a">4.5 (130)</li>
-                                </ul>
-                            </div>
-                            <div class="courses-desc">
-                                <p class="ps-400 s16 c51">
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered alteration
-                                </p>
-                            </div>
-                            <div class="courses-btn">
-                                <a href="javascript:void(0)" class="primary-btn">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="courses shadow-4 rounded-tt">
-                        <div class="courses-img">
-                            <img src="{{ asset('') }}asset/frontend/images/course3.png" alt="courses" class="img">
-                        </div>
-                        <div class="courses-content">
-                            <div class="courses-name d-flex justify-content-between align-items-center">
-                                <h4 class="ps-700 s22 c00">Johine Adam</h4>
-                                <ul class="d-flex justify-content-between">
-                                    <li>
-                                        <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
-                                    </li>
-                                    <li class="ps-700 s16 c8a">4.5 (230)</li>
-                                </ul>
-                            </div>
-                            <div class="courses-desc">
-                                <p class="ps-400 s16 c51">
-                                    There are many variations of passages of Lorem Ipsum available, but the
-                                    majority have suffered alteration
-                                </p>
-                            </div>
-                            <div class="courses-btn">
-                                <a href="javascript:void(0)" class="primary-btn">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
         <!-- Swiper Slider End -->

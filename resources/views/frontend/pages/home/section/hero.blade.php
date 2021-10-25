@@ -6,7 +6,7 @@
                     <ul>
                         <li><a href="#meditations"
                                 class="transition-e tc d-block ps-700 cff s18 capitalize">Meditations</a></li>
-                        <li><a href="{{ url('course-details') }}" class="transition-e tc d-block ps-700 cff s18 capitalize">Courses</a>
+                        <li><a href="{{ url('course') }}" class="transition-e tc d-block ps-700 cff s18 capitalize">Courses</a>
                         </li>
                         <li><a href="{{ url('sessions') }}"
                                 class="transition-e tc d-block ps-700 cff s18 capitalize">Sessions</a></li>
