@@ -1,20 +1,20 @@
 <section class="gellary-section py-100">
     <div class="container">
         <div class="filtering-btn">
-            <button type="button" class="ps-700 c00 s23" data-filter="all">All Courses</button>
-            <button type="button" class="ps-700 c00 s23" data-filter=".popular-courses">Popular Courses</button>
-            <button type="button" class="ps-700 c00 s23" data-filter=".new-courses">New Courses</button>
+            <button type="button" class="ps-700 c00 s23" data-filter="all">All {{$title}}</button>
+            <button type="button" class="ps-700 c00 s23" data-filter=".popular-courses">Popular {{$title}}</button>
+            <button type="button" class="ps-700 c00 s23" data-filter=".new-courses">New {{$title}}</button>
         </div>
         <div class="row gx-4 gy-5 mix-filter">
-            @foreach ($new_courses as $new_course)
+            @foreach ($new_data as $row)
             <div class="col-lg-4 col-sm-6 mix new-courses">
                 <div class="courses shadow-4 rounded-tt">
                     <div class="courses-img">
-                        <img src="{{ asset($new_course->image) }}" alt="courses" class="img">
+                        <img src="{{ asset($row->image) }}" alt="courses" class="img">
                     </div>
                     <div class="courses-content">
                         <div class="courses-name d-flex justify-content-between align-items-center">
-                            <h4 class="ps-700 s22 c00">{{ $new_course->title }}</h4>
+                            <h4 class="ps-700 s22 c00">{{ $row->title }}</h4>
                             <ul class="d-flex justify-content-between">
                                 <li>
                                     <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="courses-desc">
                             <p class="ps-400 s16 c51">
-                                {{ $new_course->description }}
+                                {{ $row->description }}
                             </p>
                         </div>
                         <div class="courses-btn">
@@ -34,15 +34,15 @@
                 </div>
             </div>
             @endforeach
-            @foreach ($popular_courses as $popular_course)
+            @foreach ($popular_data as $row)
             <div class="col-lg-4 col-sm-6 mix popular-courses">
                 <div class="courses shadow-4 rounded-tt">
                     <div class="courses-img">
-                        <img src="{{ asset($popular_course->event->image) }}" alt="courses" class="img">
+                        <img src="{{ asset($row->event->image) }}" alt="courses" class="img">
                     </div>
                     <div class="courses-content">
                         <div class="courses-name d-flex justify-content-between align-items-center">
-                            <h4 class="ps-700 s22 c00">{{ $popular_course->event->title }}</h4>
+                            <h4 class="ps-700 s22 c00">{{ $row->event->title }}</h4>
                             <ul class="d-flex justify-content-between">
                                 <li>
                                     <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
@@ -52,7 +52,7 @@
                         </div>
                         <div class="courses-desc">
                             <p class="ps-400 s16 c51">
-                                {{ $popular_course->event->description }}
+                                {{ $row->event->description }}
                             </p>
                         </div>
                         <div class="courses-btn">
@@ -89,15 +89,15 @@
                     </div>
                 </div>
             </div> --}}
-            @foreach ($all_courses as $all_course)
+            @foreach ($all_data as $row)
             <div class="col-lg-4 col-sm-6 mix new-courses popular-courses">
                 <div class="courses shadow-4 rounded-tt">
                     <div class="courses-img">
-                        <img src="{{ asset($all_course->event->image) }}" alt="courses" class="img">
+                        <img src="{{ asset($row->event->image) }}" alt="courses" class="img">
                     </div>
                     <div class="courses-content">
                         <div class="courses-name d-flex justify-content-between align-items-center">
-                            <h4 class="ps-700 s22 c00">{{ $all_course->event->title }}</h4>
+                            <h4 class="ps-700 s22 c00">{{ $row->event->title }}</h4>
                             <ul class="d-flex justify-content-between">
                                 <li>
                                     <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="courses-desc">
                             <p class="ps-400 s16 c51">
-                               {{ $all_course->event->description }}
+                               {{ $row->event->description }}
                             </p>
                         </div>
                         <div class="courses-btn">

@@ -19,7 +19,7 @@ class Event extends Model
     protected $table = 'events';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
-    protected $guarded = ['id'];
+    protected $guarded = [];
     // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
@@ -31,7 +31,7 @@ class Event extends Model
     */
 
     public function category(){
-        
+
         return $this->belongsTo(Category::class);
     }
 
