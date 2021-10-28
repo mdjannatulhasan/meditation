@@ -11,6 +11,7 @@ class CourseController extends Controller
 {
     public function index(){
         $all_data = CourseStub::with('event')->where('type','course')->limit(20)->get();
+        // dd($all_data);
         $popular_data = CourseStub::with('event')->where('type','popular_course')->limit(20)->get();
         $new_data = Event::whereDate('starting_date', ">=", date('Y-m-d'))
         ->where('category_id', 3)
@@ -18,7 +19,8 @@ class CourseController extends Controller
         ->limit(20)
         ->get();
         $title = "Course";
-        // dd($popular_courses);
+        // dd($all_data);
+
         return view('frontend.pages.courses.courses', compact('all_data' ,'popular_data', 'new_data', 'title'));
     }
 }

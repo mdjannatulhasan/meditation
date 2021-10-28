@@ -18,7 +18,7 @@ class SessionController extends Controller
         ->limit(20)
         ->get();
         $title = "Session";
-        // dd($all_data);
+        // dd($popular_data);
         return view('frontend.pages.courses.courses', compact('all_data', 'popular_data', 'new_data', 'title'));
     }
 }

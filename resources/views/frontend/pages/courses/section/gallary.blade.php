@@ -90,6 +90,7 @@
                 </div>
             </div> --}}
             @foreach ($all_data as $row)
+            {{--  dd($all_data);  --}}
             <div class="col-lg-4 col-sm-6 mix new-courses popular-courses">
                 <div class="courses shadow-4 rounded-tt">
                     <div class="courses-img">
