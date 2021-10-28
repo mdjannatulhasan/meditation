@@ -10,8 +10,11 @@ use Illuminate\Http\Request;
 class SessionDetailController extends Controller
 {
     public function index($id){
-        $session_details = Event::where('id', $id)->first();
-        dd($session_details);
-        return view('frontend.pages.sessions-details.sessions-details', compact('session_details'));
+        $data = Event::where('id', $id)->first();
+        $related_data = Event::where('category_id',$data->category_id)
+            ->orderby('id',"Desc")
+            ->limit('3')
+            ->get();
+        return view('frontend.pages.sessions-details.sessions-details', compact('data','related_data'));
     }
 }

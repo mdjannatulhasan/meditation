@@ -31,16 +31,9 @@ class EventCrudController extends CrudController
         CRUD::setEntityNameStrings('event', 'events');
 
 
-        $this->crud->setColumns(['category']);
-        
-        $this->crud->addField([    // SELECT2
-            'label'         => 'Category',
-            'type'          => 'select',
-            'name'          => 'category_id',
-            'entity'        => 'category',
-            'attribute'     => 'title',
-            // 'model'     => "App\Models\Category", 
-        ]);
+//        $this->crud->setColumns(['category']);
+
+
     }
 
     /**
@@ -51,20 +44,15 @@ class EventCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
         CRUD::column('title');
-        CRUD::column('description');
         CRUD::column('contribution_fee');
-        CRUD::column('category_id');
-        CRUD::column('date');
-        CRUD::column('time');
-        CRUD::column('day');
+        CRUD::addColumn([
+            'name' => 'category_id',
+            'entity' => 'category',
+        ]);
         CRUD::column('starting_date');
         CRUD::column('ending_date');
         CRUD::column('image')->type('image');
-        CRUD::column('created_at');
-        CRUD::column('updated_at');
-
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -85,16 +73,21 @@ class EventCrudController extends CrudController
         // CRUD::field('id');
         CRUD::field('title');
         CRUD::field('description');
-        CRUD::field('contribution_fee');
-        CRUD::field('category_id');
-        CRUD::field('date');
-        CRUD::field('time');
-        CRUD::field('day');
+        CRUD::addField([
+            'name' => 'contribution_fee',
+            "type" => "number"
+        ]);
+        $this->crud->addField([    // SELECT2
+            'label'         => 'Category',
+            'type'          => 'select',
+            'name'          => 'category_id',
+            'entity'        => 'category',
+            'attribute'     => 'title',
+            // 'model'     => "App\Models\Category",
+        ]);
         CRUD::field('starting_date');
         CRUD::field('ending_date');
         CRUD::field('image')->type('image');
-        // CRUD::field('created_at');
-        // CRUD::field('updated_at');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

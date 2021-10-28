@@ -23,7 +23,7 @@
                                 </p>
                             </div>
                             <div class="session-m-r d-flex justify-content-between align-items-center">
-                                <a href="javascript:void(0)" class="ps-700 s16 cb6">More...</a>
+                                <a href="{{url('session-details',$indevidual_session->event->id)}}" class="ps-700 s16 cb6">More...</a>
                                 <ul class="d-flex justify-content-between">
                                     <li>
                                         <img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star">
