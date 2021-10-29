@@ -29,7 +29,7 @@
                                 </p>
                             </div>
                             <div class="courses-btn">
-                                <a href="javascript:void(0)" class="primary-btn">Book Now</a>
+                                <a href="{{ url('course-details', $course->id) }}" class="primary-btn">Book Now</a>
                             </div>
                         </div>
                     </div>

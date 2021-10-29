@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('course', 'Frontend\CourseController@index');
-Route::get('course-details', 'Frontend\CourseDetailsController@index');
+Route::get('course-details/{id}', 'Frontend\CourseDetailsController@index');
 Route::get('about', 'Frontend\AboutController@index');
 Route::get('body-yoga', 'Frontend\YogaController@index');
 Route::get('contact', 'Frontend\ContactController@index');
 Route::get('detox', 'Frontend\DetoxController@index');
 Route::get('events', 'Frontend\EventController@index');
-Route::get('event-details', 'Frontend\EventDetailsController@index');
+Route::get('event-details/{id}', 'Frontend\EventDetailsController@index');
 Route::get('focus', 'Frontend\FocuseController@index');
 Route::get('gallery', 'Frontend\GallaryController@index');
 Route::get('living', 'Frontend\LivingController@index');

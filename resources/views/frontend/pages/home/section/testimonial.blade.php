@@ -16,7 +16,7 @@
                                 <img src="{{ asset('') }}asset/frontend/images/Vector.png" alt="Vector">
                             </div>
                             <div class="client-img p-relative tr">
-                                <img src="{{ asset($testimonial->image) }}" alt="client" class="im" width="100%">
+                                <img src="{{ asset($testimonial->image) }}" alt="client" class="im" width="550px" height="350px">
                                 <div class="client-fidback shadow-3 tl">
                                     <img src="{{ asset('') }}asset/frontend/svg-icon/quote.svg" alt="quote"
                                         class="quote">

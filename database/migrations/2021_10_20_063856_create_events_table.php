@@ -21,8 +21,8 @@ class CreateEventsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->text('description');
             $table->double('contribution_fee');
-            $table->timestamps('starting_date')->nullable();
-            $table->timestamps('ending_date')->nullable();
+            $table->timestamp('starting_date')->nullable();
+            $table->timestamp('ending_date')->nullable();
             $table->string('image');
             $table->timestamps();
         });

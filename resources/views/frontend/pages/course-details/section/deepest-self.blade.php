@@ -5,11 +5,11 @@
                 <li><img src="{{ asset('') }}asset/frontend/svg-icon/yellow-star.svg" alt="star"></li>
                 <li class="ps-700 c00 s16">4.8 (120)</li>
             </ul>
-            <h2 class="ps-700 c00 s49">This Deepest Self</h2>
+            <h2 class="ps-700 c00 s49">This {{ $data->title }}</h2>
             <h3 class="ps-700 c00 s22">by Jams Edro</h3>
         </div>
         <div class="cd-img">
-            <img src="{{ asset('') }}asset/frontend/images/cd.png" alt="Course Details" class="img">
+            <img src="{{ asset($data->image) }}" alt="Course Details" class="img">
         </div>
         <div class="cd-btn">
             <a href="javascript:void(0)" class="secondary-btn">Book Now</a>
@@ -20,7 +20,7 @@
                 <div class="cd-text-box">
                     <h3 class="ps-700 c00 s28">What you’ll learn</h3>
                     <p class="ps-400 c60 s16">
-                        Over the next 10 days, you will learn how see and be with your life in a more conscious and compassionate way. Each day is meant to stand alone as its own contemplation and meditation. You will discover the strength of your loving awareness and  it to help you move through your varied experiences with more grace and acceptance. When we look at our lives through the lens of spirit and heart, we take what is ordinary and spin wisdom.
+                        {{ $data->description }}
                     </p>
                 </div>
             </div>

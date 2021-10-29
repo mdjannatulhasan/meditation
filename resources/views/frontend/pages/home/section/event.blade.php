@@ -23,7 +23,7 @@
                     </div>
                     <div class="event-desc event-desc-1">
                         <p class="ps-400 s14 c6a">{{ $upcoming_event->description }}</p>
-                        <a href="javascript:void(0)" class="ps-700 s18 cff tc mx-auto d-block">Pre-book
+                        <a href="{{ url('event-details', $upcoming_event->id) }}" class="ps-700 s18 cff tc mx-auto d-block">Pre-book
                             Now</a>
                         <p class="tr s12 ps-400 c99">45 People Booked</p>
                     </div>
