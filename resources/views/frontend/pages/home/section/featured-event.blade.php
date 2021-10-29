@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="featured-events">
-                            <a href="javascript:void(0)" class="primary-btn">Join Now</a>
+                            <a href="{{ url('event-details', $featured_event->id) }}" class="primary-btn">Join Now</a>
                         </div>
                     </div>
                 </div>
