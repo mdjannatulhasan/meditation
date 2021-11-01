@@ -37,23 +37,23 @@
             <div class="col-lg-4 col-sm-6 mix live upcoming-events">
                 <div class="featured-events shadow-4 rounded-tt">
                     <div class="featured-events-img p-relative">
-                        <img src="{{ asset( $all_event->event->image )}}" alt="featured events" class="img">
+                        <img src="{{ asset( $all_event->image )}}" alt="featured events" class="img">
                         <p class="ps-700 s14 cff fe-live-date fe-date tc">Mon - 07:00 pm</p>
                     </div>
                     <div class="featured-events-content">
                         <div class="featured-events-name">
-                            <h4 class="ps-700 s18 c00">{{ $all_event->event->title }}</h4>
+                            <h4 class="ps-700 s18 c00">{{ $all_event->title }}</h4>
                         </div>
                         <div class="featured-events-desc">
                             <p class="ps-400 s16 c51">
-                                {{ $all_event->event->description }}
+                                {{ $all_event->description }}
                             </p>
                             <div class="tr">
                                 <a href="javascript:void(0)" class="ps-700 cfd s16">1.7k attending</a>
                             </div>
                         </div>
                         <div class="featured-events">
-                            <a href="{{ url('event-details', $all_event->event->id) }}" class="primary-btn">Join Now</a>
+                            <a href="{{ url('event-details', $all_event->id) }}" class="primary-btn">Join Now</a>
                         </div>
                     </div>
                 </div>

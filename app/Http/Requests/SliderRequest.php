@@ -27,6 +27,8 @@ class SliderRequest extends FormRequest
     {
         return [
             // 'name' => 'required|min:5|max:255'
+            'text' => 'required|min:5|max:255',
+            'image' => 'required'
         ];
     }
 

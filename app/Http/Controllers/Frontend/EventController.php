@@ -10,7 +10,7 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index(){
-        $all_events = CourseStub::with('event')->where('type','featured_events')->limit(20)->get();
+        $all_events = Event::all();
         // dd($all_events);
         $live_events = Event::whereDate('starting_date', "<", date("Y-m-d"))
         ->whereDate('ending_date', ">", date("Y-m-d"))
@@ -21,7 +21,7 @@ class EventController extends Controller
         ->where('category_id', 1)
         ->orderBy('id', 'DESC')
         ->limit(20)->get();
-        $upcoming_events = Event::whereDate('ending_date', "<", date("Y-m-d"))
+        $upcoming_events = Event::whereDate('starting_date', "<", date("Y-m-d"))
         ->where('category_id', 1)
         ->orderBy('id', 'DESC')
         ->limit(20)->get();

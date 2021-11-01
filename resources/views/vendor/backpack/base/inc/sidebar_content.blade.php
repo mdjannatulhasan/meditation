@@ -6,3 +6,7 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('testimonial') }}'><i class='nav-icon la la-question'></i> Testimonials</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('course-stub') }}'><i class='nav-icon la la-question'></i> Course stubs</a></li>
+
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('gallary') }}'><i class='nav-icon la la-question'></i> Gallaries</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('video') }}'><i class='nav-icon la la-question'></i> Videos</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('elfinder') }}"><i class="nav-icon la la-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>

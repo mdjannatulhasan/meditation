@@ -19,4 +19,6 @@ Route::group([
     Route::crud('event', 'EventCrudController');
     Route::crud('testimonial', 'TestimonialCrudController');
     Route::crud('course-stub', 'CourseStubCrudController');
+    Route::crud('gallary', 'GallaryCrudController');
+    Route::crud('video', 'VideoCrudController');
 }); // this should be the absolute last line of this file

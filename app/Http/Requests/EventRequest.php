@@ -27,6 +27,10 @@ class EventRequest extends FormRequest
     {
         return [
             // 'name' => 'required|min:5|max:255'
+            'title' => 'required|min:5|max:255',
+            'description' => 'required',
+            'contribution_fee' => 'required',
+            'image' => 'required'
         ];
     }
 

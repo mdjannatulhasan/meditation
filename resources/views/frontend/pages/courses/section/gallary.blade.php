@@ -56,7 +56,7 @@
                             </p>
                         </div>
                         <div class="courses-btn">
-                            <a href="{{url('session-details',$row->id)}}" class="primary-btn">Book Now </a>
+                            <a href="{{url($row->event->category_id==2 ? 'session-details' : 'course-details',$row->id)}}" class="primary-btn">Book Now </a>
                         </div>
                     </div>
                 </div>

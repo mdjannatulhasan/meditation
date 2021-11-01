@@ -17,12 +17,12 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-md-8 col-lg-9 d-flex align-items-center">
+            {{-- <div class="col-md-8 col-lg-9 d-flex align-items-center">
                 <div class="hero-text tr-md">
                     <h1 class="i-400 cff s61">“ To understand the immeasurable, the mind must be extraordinarily
                         quiet, still.”</h1>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

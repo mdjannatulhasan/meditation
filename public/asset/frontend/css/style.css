@@ -98,6 +98,7 @@ Start Hero Section
 	padding-bottom: 10rem;
 }
 
+
 .dacstop-menu {
 	padding: 0 2.5rem;
 }
@@ -1264,14 +1265,15 @@ Back To Top Btn
 
 
 .courses-img .img, .session-img img, .event-img img {
-    height: 250px;
+	
+    height: 207px;
     width: 100%;
+	
 }
+
 .cd-img img{
 	height: 550px;
 	width:100%;
 }
-.event img{
-	height: 515px;
-	width:100%;
-}
+
+
