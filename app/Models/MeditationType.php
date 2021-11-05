@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Mutators\ImageMutator;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Video extends Model
+class MeditationType extends Model
 {
-    use CrudTrait;
+    use CrudTrait, ImageMutator;
 
     /*
     |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ class Video extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'videos';
+    protected $table = 'meditation_types';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -34,11 +35,6 @@ class Video extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function meditation_type()
-    {
-
-        return $this->belongsTo(MeditationType::class);
-    }
 
     /*
     |--------------------------------------------------------------------------

@@ -21,4 +21,8 @@ Route::group([
     Route::crud('course-stub', 'CourseStubCrudController');
     Route::crud('gallary', 'GallaryCrudController');
     Route::crud('video', 'VideoCrudController');
+    Route::crud('meditation-type', 'MeditationTypeCrudController');
+    Route::crud('tryout', 'TryoutCrudController');
+    Route::crud('meditation-video', 'MeditationVideoCrudController');
+    Route::crud('sleep', 'SleepCrudController');
 }); // this should be the absolute last line of this file
