@@ -13,6 +13,9 @@
 
             <div class="carousel-item {{$key == 0 ? 'active' : ''}}">
                 <img src="{{ $slider->image }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>{{$slider->text}}</h1>
+                </div>
             </div>
             @endforeach
             {{--<div class="carousel-item">

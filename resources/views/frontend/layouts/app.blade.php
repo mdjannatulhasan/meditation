@@ -23,8 +23,11 @@
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/responsive.css" />
         <style>
             .carousel-item {
-                height: 500px
-            ;
+                height: 500px ;
+            }
+            .carousel-caption {
+                top: 45%;
+                left: 35%;
             }
         </style>
 </head>
