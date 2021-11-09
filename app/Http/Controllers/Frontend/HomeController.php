@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CourseStub;
 use App\Models\Event;
 use App\Models\MeditationType;
+use App\Models\Slider;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -28,8 +29,10 @@ class HomeController extends Controller
 
         $featured_events= CourseStub::with('event')->where('type','featured_events')->limit(20)->get();
         $satories = MeditationType::get();
+        $sliders = Slider::get();
 
         // dd($featured_events);
-        return view('frontend.pages.home.home', compact('upcoming_events', 'testimonials', 'courses', 'indevidual_sessions', 'featured_events', 'satories'));
+        return view('frontend.pages.home.home', compact('upcoming_events', 'testimonials', 'courses', 'indevidual_sessions', 'featured_events', 'satories', 'sliders'));
+
     }
 }
