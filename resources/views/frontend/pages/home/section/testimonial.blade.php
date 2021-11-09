@@ -7,70 +7,31 @@
         <!-- Swiper Slider Start -->
         <div class="swiper-container swiper-container-testi">
             <div class="swiper-wrapper">
-                @foreach ($testimonials as $testimonial)
                 <div class="swiper-slide">
-                    <div class="">
-                        
-                        <div class="testimonial-content d-md-flex align-items-md-end justify-content-md-between">
-                            <div class="testimonial-vector">
-                                <img src="{{ asset('') }}asset/frontend/images/Vector.png" alt="Vector">
+                    @foreach ($testimonials as $testimonial)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews rounded testimonial">
+                            <div class="reviews-client-id d-flex align-items-center justify-content-center">
+                                <img src="{{ asset($testimonial->image) }}" alt="Jhon-Smith">
+
                             </div>
-                            <div class="client-img p-relative tr">
-                                <img src="{{ asset($testimonial->image) }}" alt="client" class="im" width="550px" height="350px">
-                                <div class="client-fidback shadow-3 tl">
-                                    <img src="{{ asset('') }}asset/frontend/svg-icon/quote.svg" alt="quote"
-                                        class="quote">
-                                    <p class="ps-400 s18 c1f">
-                                        {{ $testimonial->description }}
-                                    </p>
-                                    <h4 class="ps-700 s18 c1f">{{ $testimonial->name }}, {{ $testimonial->title }}</h4>
-                                    <p class="ps-400 s14 c4a">Warren, Michigan</p>
-                                    <div class="client-rating">
-                                        <span>
-                                            <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg"
-                                                alt="star">
-                                        </span>
-                                        <span>
-                                            <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg"
-                                                alt="star">
-                                        </span>
-                                        <span>
-                                            <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg"
-                                                alt="star">
-                                        </span>
-                                        <span>
-                                            <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg"
-                                                alt="star">
-                                        </span>
-                                        <span>
-                                            <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg"
-                                                alt="star">
-                                        </span>
-                                    </div>
+                            <p class="s14 c66 text-center">
+                                {{ $testimonial->description }}
+                            </p>
+                            <hr>
+                            <div class="">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <h2 class="c00 s14">{{ $testimonial->name }}</h2>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <p class="s12 c81">{{ $testimonial->title }}</p>
                                 </div>
                             </div>
+
                         </div>
-                        
                     </div>
-                    <div class="other-clinet-fid tc">
-                        <h3 class="ps-700 s22 c1f">See what other people are saying</h3>
-                        <ul class="other-clinet-rating">
-                            <li class="d-inline-block">
-                                <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg" alt="star">
-                                <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg" alt="star">
-                                <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg" alt="star">
-                                <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg" alt="star">
-                                <img src="{{ asset('') }}asset/frontend/svg-icon/orange-star.svg" alt="star">
-                            </li>
-                            <li class="d-inline-block">
-                                <p class="ps-700 s20 c1f">4.56 / 5.0</p>
-                            </li>
-                        </ul>
-                        <a href="javascript:void(0)" class="ps-700 s20 cff tc other-clinet-btn">Read 1,245 more
-                            reviews</a>
-                    </div>
+                    @endforeach
                 </div>
-                @endforeach
 
             </div>
         </div>

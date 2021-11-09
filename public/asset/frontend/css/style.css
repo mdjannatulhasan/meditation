@@ -1264,16 +1264,41 @@ Back To Top Btn
 /*developer css*/
 
 
-.courses-img .img, .session-img img, .event-img img {
-	
+.courses-img .img, .session-img img, .event-img img, .featured-events-img img {
+
     height: 207px;
     width: 100%;
-	
+    border-radius: 10px;
+
 }
 
-.cd-img img{
-	height: 550px;
-	width:100%;
-}
+/* start Testimonials */
 
+.testimonial hr{
+    width: 168px;
+    border: 2px solid #000000;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.testimonial h2{
+    font-family: Google Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 157.2%;
+
+    /* or 31px */
+    text-align: center;
+    letter-spacing: 0.16em;
+
+    color: #000000;
+}
+.testimonial img{
+    width: 83px;
+    height: 83px;
+    border-radius: 41.5px;
+}
+/* end Testimonials */
 
