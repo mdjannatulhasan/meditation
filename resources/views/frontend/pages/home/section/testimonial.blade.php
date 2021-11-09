@@ -38,7 +38,7 @@
                         </div>
                         <div class="testimonial-content text-center">
                             <div class="session-desc pt-2">
-                                <p class="ps-400 s16 c51 testiminial-text">
+                                <p class="ps-400 s16 c51 testimonial-text">
                                     {{  substr($testimonial->description, 0, 80)  }} {{strlen($testimonial->description) > 80 ? '...':''}}
                                 </p>
                                 <hr>

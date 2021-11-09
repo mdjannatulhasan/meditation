@@ -20,20 +20,20 @@
         <div id="Paris" class="tabcontent gallary-tab-video tryout">
             <div class="row g-5">
                 @foreach ($tryouts as $tryout)
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-sm-6">
                     <div class="tryout-video">
-                        <iframe width="100%" height="165" src="https://www.youtube.com/embed/{{ $tryout->video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="275" src="https://www.youtube.com/embed/{{ $tryout->video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="tryouts-title">
                         {{--  <p class="ps-400 s12 c86">Text</p>
                         <p class="ps-400 s12 c86">10:23min</p>  --}}
-                        <h4>{{ $tryout->heading }}</h4>
-                        <p>with {{ $tryout->trainner }}</p>
+                        <h1 style="font-weight: 700; font-size: 25px;">{{ $tryout->heading }}</h1>
+                        <h6  style="font-weight: 700; font-size: 18px; color: #828282">with {{ $tryout->trainner }}</h6>
                     </div>
                     <div class="description">
-                        <p>
-                            {!! $tryout->description !!}
-                        </p>
+                        <span style="font-size: 12px ;  height: 90px">
+                            {!! substr($tryout->description, 0, 300) !!} {{strlen($tryout->description) > 300 ? '...' : '' }}
+                        </span>
                     </div>
                 </div>
                 @endforeach
