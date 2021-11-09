@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Focuse')
+@section('title', $title)
 
-    
+
 @section('content')
 
 @include('frontend.pages.focuse.section.banner')

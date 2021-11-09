@@ -12,6 +12,7 @@ class GallaryController extends Controller
     public function index(){
         $gallaries = Gallary::all();
         $videos = Video::all();
+        // dd($videos);
 
         return view('frontend.pages.gallary.gallary', compact('gallaries', 'videos'));
     }

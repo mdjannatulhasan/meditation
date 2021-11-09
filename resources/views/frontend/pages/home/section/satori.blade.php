@@ -17,7 +17,9 @@
                     <div class="swiper-slide">
                         <div class="courses shadow-4 rounded-tt">
                             <div class="courses-img">
-                                <a href="">
+                                {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
+                                <a href="{{ url($satori->id == 5 ? 'focus' : 'stress', $satori->id) }}">
+                                    {{--  href="{{url($row->event->category_id==2 ? 'session-details' : 'course-details',$row->id)}}"   --}}
                                     <img src="{{ asset($satori->image) }}" alt="courses" class="img">
                                 </a>
                             </div>

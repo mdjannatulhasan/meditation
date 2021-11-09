@@ -1,22 +1,27 @@
 <section class="py-100">
     <div class="container">
         <div class="w-870">
-            <p class="ps-400 c00 s40 tc">Increase your <span class="ps-700 black-line">Focuse</span></p>
+            <p class="ps-400 c00 s40 tc">Increase your <span class="ps-700 black-line">{{ $title }}</span></p>
             <div class="focuse-p-text">
                 <p class="ps-400 c60 s20">
-                    Meditation is a popular technique for relaxation and stress relief that can significantly increase your ability to concentrate and focus. Focus is the ability to pay attention to one thing at the expense of all others, which can be very difficult in a society that emphasizes multitasking and success. Increasing your ability to focus can foster creativity, promote problem-solving skills and decrease the stress associated with handling more than one task at once.
+                    {!! $data->description !!}
                 </p>
             </div>
             <div class="row g-5">
+                @foreach ($meditation_videos as $meditation_video)
                 <div class="col-md-4 col-sm-6">
-                    <div class="sleep-music-video">
-                        <iframe width="100%" height="165" src="https://www.youtube.com/embed/t0kACis_dJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+
+                   <div class="sleep-music-video">
+                    <iframe width="100%" height="165" src="https://www.youtube.com/embed/{{ $meditation_video->video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
                     <div class="d-flex justify-content-between align-items-end">
                         <p class="ps-400 s12 c86">Briting into Sleep</p>
                         <p class="ps-400 s12 c86">10:23min</p>
                     </div>
+
                 </div>
+                @endforeach
                 <div class="col-md-4 col-sm-6">
                     <div class="sleep-music-video">
                         <iframe width="100%" height="165" src="https://www.youtube.com/embed/t0kACis_dJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
