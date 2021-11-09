@@ -35,7 +35,7 @@
                         <a href="{{ url('signup') }}" class="ps-700 s18 uppercase cb6">SIGN UP</a>
                     </li>  --}}
                     <li>
-                        <a href="#" class="ps-700 s18 uppercase c4a">TRYOUTS</a>
+                        <a href="{{ url('tryouts') }}" class="ps-700 s18 uppercase c4a">TRYOUTS</a>
                     </li>
                     <li>
                         <a href="{{ url('signin') }}" class="ps-700 s18 uppercase c4a">SIGN IN</a>

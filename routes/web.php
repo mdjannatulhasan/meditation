@@ -30,6 +30,7 @@ Route::get('session-details/{id}', 'Frontend\SessionDetailController@index');
 Route::get('shop', 'Frontend\ShopController@index');
 Route::get('sleep', 'Frontend\SleepController@index');
 Route::get('stress', 'Frontend\StressController@index');
+Route::get('tryouts', 'Frontend\TryoutsController@index');
 
 
 // signin and signup
