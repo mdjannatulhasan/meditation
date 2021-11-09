@@ -1,4 +1,4 @@
-<section class="testimonial-section pt-100">
+<section class="testimonial-section pt-50">
     <div class="container p-relative">
         <div class="testimonial-title">
             <h2 class="ps-700 s38 c00">Testimonial</h2>
@@ -32,7 +32,7 @@
                     </div>
                 </div>--}}
                 <div class="swiper-slide">
-                    <div class="session shadow-4 rounded-tt">
+                    <div class="session  rounded-tt">
                         <div class="testimonial-img text-center ">
                             <img src="{{ asset($testimonial->image) }}" alt="session" class="img">
                         </div>

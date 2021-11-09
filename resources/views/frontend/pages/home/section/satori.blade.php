@@ -1,5 +1,5 @@
 
-    <section class="satori-section py-100" id="meditations">
+    <section class="satori-section pt-100" id="meditations">
         <div class="container p-relative">
             <div class="satori-title tc">
                 <h2 class="ps-700 s38 c00">Satori Meditations</h2>
@@ -14,7 +14,7 @@
             <div class="swiper-container satori-swiper-container">
                 <div class="swiper-wrapper swiper-slide-pb">
                     <div class="swiper-slide">
-                        <div class="courses shadow-4 rounded-tt">
+                        <div class="  rounded-tt">
                             <div class="courses-img">
                                 {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
                                 <a href="{{ url('sleep/') }}">
@@ -28,7 +28,7 @@
                     </div>
                     @foreach ($satories as $satori)
                     <div class="swiper-slide">
-                        <div class="courses shadow-4 rounded-tt">
+                        <div class="  rounded-tt">
                             <div class="courses-img">
                                 {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
                                 <a href="{{ url('meditation/'.$satori->title.'/'.$satori->id) }}">

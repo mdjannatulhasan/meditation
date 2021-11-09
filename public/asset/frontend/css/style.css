@@ -1281,8 +1281,16 @@ Back To Top Btn
     height: 80px;
 }
 
-.testimonial{
+.testimonial-text{
     height: 90px;
+}
+
+.satori-img-title.tc{
+    position: relative;
+    top: -30px;
+}
+.satori-img-title.tc h4{
+    color: #fff !important;
 }
 /* end Testimonials */
 
