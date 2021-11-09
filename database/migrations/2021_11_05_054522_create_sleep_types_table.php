@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSleepsTable extends Migration
+class CreateSleepTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateSleepsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sleeps', function (Blueprint $table) {
+        Schema::create('sleep_types', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('sleep_type_id')->unsigned();
-            $table->foreign('sleep_type_id')->references('id')->on('sleep_types');
-            $table->string('video');
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateSleepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sleeps');
+        Schema::dropIfExists('sleep_types');
     }
 }

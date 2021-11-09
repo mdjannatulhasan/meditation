@@ -34,11 +34,10 @@ class Sleep extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function video()
+    public function sleep_type()
     {
-        return $this->belongsTo(Video::class);
+        return $this->belongsTo(SleepType::class);
     }
-
     /*
     |--------------------------------------------------------------------------
     | SCOPES

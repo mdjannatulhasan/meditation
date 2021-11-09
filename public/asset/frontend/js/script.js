@@ -42,6 +42,20 @@
 				nextEl: '.swiper-next-testi',
 				prevEl: '.swiper-prev-testi',
 			},
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }
 
 		});
 

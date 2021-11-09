@@ -16,3 +16,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('meditation-video') }}'><i class='nav-icon la la-question'></i> Meditation videos</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('sleep') }}'><i class='nav-icon la la-question'></i> Sleeps</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('sleep-type') }}'><i class='nav-icon la la-question'></i> Sleep types</a></li>

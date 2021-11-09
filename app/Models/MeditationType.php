@@ -35,7 +35,10 @@ class MeditationType extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function videos()
+    {
+        return $this->hasMany(MeditationVideo::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

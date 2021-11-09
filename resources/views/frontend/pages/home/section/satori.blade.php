@@ -13,12 +13,25 @@
             <!-- Swiper Slider Start -->
             <div class="swiper-container satori-swiper-container">
                 <div class="swiper-wrapper swiper-slide-pb">
+                    <div class="swiper-slide">
+                        <div class="courses shadow-4 rounded-tt">
+                            <div class="courses-img">
+                                {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
+                                <a href="{{ url('sleep/') }}">
+                                    <img src="{{ asset('/asset/frontend/images/sleep.jpg') }}" alt="courses" class="img">
+                                </a>
+                            </div>
+                            <div class="satori-img-title tc">
+                                <h4 class="ps-700 s20 c22">Sleep</h4>
+                            </div>
+                        </div>
+                    </div>
                     @foreach ($satories as $satori)
                     <div class="swiper-slide">
                         <div class="courses shadow-4 rounded-tt">
                             <div class="courses-img">
                                 {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
-                                <a href="{{ url($satori->id == 5 ? 'focus' : 'stress', $satori->id) }}">
+                                <a href="{{ url('meditation/'.$satori->title.'/'.$satori->id) }}">
                                     {{--  href="{{url($row->event->category_id==2 ? 'session-details' : 'course-details',$row->id)}}"   --}}
                                     <img src="{{ asset($satori->image) }}" alt="courses" class="img">
                                 </a>

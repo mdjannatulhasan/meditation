@@ -17,8 +17,7 @@ class CreateMeditationVideosTable extends Migration
             $table->id();
             $table->bigInteger('meditation_type_id')->unsigned();
             $table->foreign('meditation_type_id')->references('id')->on('meditation_types');
-            $table->bigInteger('video_id')->unsigned();
-            $table->foreign('video_id')->references('id')->on('videos');
+            $table->string('video');
             $table->timestamps();
         });
     }

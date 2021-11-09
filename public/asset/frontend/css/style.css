@@ -1274,31 +1274,15 @@ Back To Top Btn
 
 /* start Testimonials */
 
-.testimonial hr{
-    width: 168px;
-    border: 2px solid #000000;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
 
+.testimonial-img .img {
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
 }
-.testimonial h2{
-    font-family: Google Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 157.2%;
 
-    /* or 31px */
-    text-align: center;
-    letter-spacing: 0.16em;
-
-    color: #000000;
-}
-.testimonial img{
-    width: 83px;
-    height: 83px;
-    border-radius: 41.5px;
+.testiminial-text{
+    height: 90px;
 }
 /* end Testimonials */
 

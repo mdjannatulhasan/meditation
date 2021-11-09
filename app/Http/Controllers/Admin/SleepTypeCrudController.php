@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SleepRequest;
+use App\Http\Requests\SleepTypeRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class SleepCrudController
+ * Class SleepTypeCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class SleepCrudController extends CrudController
+class SleepTypeCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class SleepCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Sleep::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/sleep');
-        CRUD::setEntityNameStrings('sleep', 'sleeps');
+        CRUD::setModel(\App\Models\SleepType::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/sleep-type');
+        CRUD::setEntityNameStrings('sleep type', 'sleep types');
     }
 
     /**
@@ -39,8 +39,7 @@ class SleepCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('sleep_type_id');
-        CRUD::column('video');
+        CRUD::column('title');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -57,14 +56,9 @@ class SleepCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(SleepRequest::class);
+        CRUD::setValidation(SleepTypeRequest::class);
 
-        $this->crud->addField([    // SELECT2
-            'name' => 'sleep_type_id',
-            'type' => 'select2',
-            'entity' => 'sleep_type',
-        ]);
-        CRUD::field('video');
+        CRUD::field('title');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

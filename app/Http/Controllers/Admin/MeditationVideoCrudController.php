@@ -41,7 +41,7 @@ class MeditationVideoCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('meditation_type_id');
-        CRUD::column('video_id');
+        CRUD::column('video');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -67,7 +67,8 @@ class MeditationVideoCrudController extends CrudController
             'entity' => 'meditation_type',
         ]);
 
-        CRUD::field('video_id');
+        CRUD::field('video');
+
 
         // $this->crud->addField([ // select2_from_ajax: 1-n relationship
         //     'type' => 'select2_from_ajax_multiple',

@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class MeditationVideo extends Model
+class SleepType extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class MeditationVideo extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'meditation_videos';
+    protected $table = 'sleep_types';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -34,11 +34,10 @@ class MeditationVideo extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function meditation_type()
+    public function videos()
     {
-        return $this->belongsTo(MeditationType::class);
+        return $this->belongsTo(Sleep::class);
     }
-
     /*
     |--------------------------------------------------------------------------
     | SCOPES

@@ -7,8 +7,8 @@
         <!-- Swiper Slider Start -->
         <div class="swiper-container swiper-container-testi">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    @foreach ($testimonials as $testimonial)
+                @foreach ($testimonials as $testimonial)
+                {{--<div class="swiper-slide">
                     <div class="col-lg-4 col-md-6">
                         <div class="reviews rounded testimonial">
                             <div class="reviews-client-id d-flex align-items-center justify-content-center">
@@ -30,8 +30,32 @@
 
                         </div>
                     </div>
-                    @endforeach
+                </div>--}}
+                <div class="swiper-slide">
+                    <div class="session shadow-4 rounded-tt">
+                        <div class="testimonial-img text-center ">
+                            <img src="{{ asset($testimonial->image) }}" alt="session" class="img">
+                        </div>
+                        <div class="testimonial-content text-center">
+                            <div class="session-desc pt-2">
+                                <p class="ps-400 s16 c51 testiminial-text">
+                                    {{  substr($testimonial->description, 0, 80)  }} {{strlen($testimonial->description) > 80 ? '...':''}}
+                                </p>
+                                <hr>
+                                <div class="pb-5">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <h2 class="c00 s14">{{ $testimonial->name }}</h2>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <p class="s12 c81">{{ $testimonial->title }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+                @endforeach
 
             </div>
         </div>
