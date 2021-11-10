@@ -26,4 +26,5 @@ Route::group([
     Route::crud('meditation-video', 'MeditationVideoCrudController');
     Route::crud('sleep', 'SleepCrudController');
     Route::crud('sleep-type', 'SleepTypeCrudController');
+    Route::crud('satori', 'SatoriCrudController');
 }); // this should be the absolute last line of this file

@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Mutators\ImageMutator;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class MeditationVideo extends Model
+class Satori extends Model
 {
-    use CrudTrait;
+    use CrudTrait, ImageMutator;
 
     /*
     |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ class MeditationVideo extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'meditation_videos';
+    protected $table = 'satoris';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -34,9 +35,9 @@ class MeditationVideo extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function satori()
+    public function videos()
     {
-        return $this->belongsTo(Satori::class);
+        return $this->hasMany(MeditationVideo::class);
     }
 
     /*

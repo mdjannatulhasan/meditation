@@ -36,7 +36,7 @@ class SleepType extends Model
     */
     public function videos()
     {
-        return $this->belongsTo(Sleep::class);
+        return $this->hasMany(Sleep::class);
     }
     /*
     |--------------------------------------------------------------------------

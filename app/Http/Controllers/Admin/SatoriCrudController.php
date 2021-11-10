@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\MeditationVideoRequest;
-use App\Models\MeditationVideo;
+use App\Http\Requests\SatoriRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class MeditationVideoCrudController
+ * Class SatoriCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class MeditationVideoCrudController extends CrudController
+class SatoriCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -27,9 +26,9 @@ class MeditationVideoCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\MeditationVideo::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/meditation-video');
-        CRUD::setEntityNameStrings('meditation video', 'meditation videos');
+        CRUD::setModel(\App\Models\Satori::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/satori');
+        CRUD::setEntityNameStrings('satori', 'satoris');
     }
 
     /**
@@ -40,8 +39,10 @@ class MeditationVideoCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('satori_id');
-        CRUD::column('video');
+        CRUD::column('title');
+        CRUD::column('image')->type('image');
+        CRUD::column('heading');
+        CRUD::column('description');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -58,29 +59,26 @@ class MeditationVideoCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(MeditationVideoRequest::class);
+        CRUD::setValidation(SatoriRequest::class);
 
-        // CRUD::field('meditation_type_id');
-        $this->crud->addField([    // SELECT2
-            'name' => 'satori_id',
-            'type' => 'select2',
-            'entity' => 'satori',
-        ]);
+        CRUD::field('title');
+        CRUD::field('image')->type('image');
+        CRUD::field('heading');
+        $this->crud->addField(
+            [   // CKEditor
+                'name'          => 'description',
+                'label'         => 'Description',
+                'type'          => 'ckeditor',
 
-        CRUD::field('video');
-
-
-        // $this->crud->addField([ // select2_from_ajax: 1-n relationship
-        //     'type' => 'select2_from_ajax_multiple',
-        //     'name' => 'video_id',
-        //     'entity' => 'video',
-        //     'attribute' => 'title',
-        //     'data_source' => url('api/video'),
-        //     'placeholder' => 'Select an article',
-        //     'include_all_form_fields' => true,
-        //     'minimum_input_length' => 0,
-        //     'dependencies' => ['meditation_type'],
-        // ]);
+                // optional:
+                // 'extra_plugins' => ['oembed', 'widget'],
+                'options'       => [
+                    'autoGrow_minHeight'   => 200,
+                    'autoGrow_bottomSpace' => 50,
+                    'removePlugins'        => 'resize,maximize',
+                ]
+            ]
+        );
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -99,21 +97,4 @@ class MeditationVideoCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
-
-//     public function store(MeditationVideoRequest $request)
-//     {
-// //        dd($request->event_id);
-//         if ($request->video_id) {
-//             foreach ($request->video_id as $video_id) {
-//                 $existence = MeditationVideo::where(['type' => $request->type, 'video_id' => $video_id])->first();
-//                 if(!$existence){
-//                     $response = MeditationVideo::create(['type' => $request->type, 'meditation_type_id' => $request->meditation_type_id, 'video_id' => $video_id]);
-//                 }
-//             }
-
-//             return redirect('/admin/meditation-video');
-//         }else{
-//             return redirect()->back();
-//         }
-//     }
 }

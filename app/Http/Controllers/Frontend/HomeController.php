@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CourseStub;
 use App\Models\Event;
 use App\Models\MeditationType;
+use App\Models\Satori;
 use App\Models\Slider;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class HomeController extends Controller
         $indevidual_sessions= CourseStub::with('event')->where('type','indivisual_session')->limit(20)->get();
 
         $featured_events= CourseStub::with('event')->where('type','featured_events')->limit(20)->get();
-        $satories = MeditationType::get();
+        $satories = Satori::get();
         $sliders = Slider::get();
 
         // dd($featured_events);

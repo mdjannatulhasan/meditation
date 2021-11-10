@@ -19,7 +19,7 @@
                 @foreach($row->videos as $video)
                     <div class="col-lg-3 col-sm-6">
                         <div class="sleep-music-video">
-                            <iframe width="100%" height="165" src="https://www.youtube.com/embed/t0kACis_dJE"
+                            <iframe width="100%" height="165" src="https://www.youtube.com/embed/{{ $video->video }}"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
