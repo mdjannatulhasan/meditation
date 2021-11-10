@@ -23,14 +23,14 @@
 </header>  --}}
 
 <header class="shadow-3">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-end">
 
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
             <div class="logo">
                 <a href="{{ url('') }}"><img src="{{ asset('') }}asset/frontend/images/footer-logo.png" alt="logo"></a>
             </div>
             <div class="h-sign-in-up">
-                <ul class="d-flex align-items-end">
+                <ul class="d-flex align-items-end header-nav-menu">
                     {{--  <li>
                         <a href="{{ url('signup') }}" class="ps-700 s18 uppercase cb6">SIGN UP</a>
                     </li>  --}}
@@ -40,6 +40,17 @@
                     <li>
                         <a href="{{ url('signin') }}" class="ps-700 s18 uppercase c4a">SIGN IN</a>
                     </li>
+                    <li>
+                        <img src="{{ asset('') }}asset/frontend/images/mute.svg" alt="">
+                    </li>
+                    <li>
+                        <form class="d-flex">
+                            <input class="form-control me-2 header-search " type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn" type="submit"><img src="{{ asset('') }}asset/frontend/images/search.png" alt=""></button>
+                        </form>
+                    </li>
+
+
                     <li class="d-md-none">
                         <!-- Mobail Menu btn -->
                         <div onclick="myFunction(this)" class="open-menu-btn">
