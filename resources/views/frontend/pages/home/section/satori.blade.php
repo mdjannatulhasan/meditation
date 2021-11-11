@@ -31,7 +31,7 @@
                         <div class="  rounded-tt">
                             <div class="courses-img">
                                 {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
-                                <a href="{{ url('meditation/'.$satori->title.'/'.$satori->id) }}">
+                                <a href="{{ url('satori/'.$satori->title.'/'.$satori->id) }}">
                                     {{--  href="{{url($row->event->category_id==2 ? 'session-details' : 'course-details',$row->id)}}"   --}}
                                     <img src="{{ asset($satori->image) }}" alt="courses" class="img">
                                 </a>

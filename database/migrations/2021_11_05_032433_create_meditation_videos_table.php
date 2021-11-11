@@ -15,8 +15,8 @@ class CreateMeditationVideosTable extends Migration
     {
         Schema::create('meditation_videos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('meditation_type_id')->unsigned();
-            $table->foreign('meditation_type_id')->references('id')->on('meditation_types');
+            $table->bigInteger('satori_id')->unsigned();
+            $table->foreign('satori_id')->references('id')->on('satoris');
             $table->string('video');
             $table->timestamps();
         });

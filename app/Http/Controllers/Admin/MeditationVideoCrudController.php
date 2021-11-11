@@ -100,20 +100,4 @@ class MeditationVideoCrudController extends CrudController
         $this->setupCreateOperation();
     }
 
-//     public function store(MeditationVideoRequest $request)
-//     {
-// //        dd($request->event_id);
-//         if ($request->video_id) {
-//             foreach ($request->video_id as $video_id) {
-//                 $existence = MeditationVideo::where(['type' => $request->type, 'video_id' => $video_id])->first();
-//                 if(!$existence){
-//                     $response = MeditationVideo::create(['type' => $request->type, 'meditation_type_id' => $request->meditation_type_id, 'video_id' => $video_id]);
-//                 }
-//             }
-
-//             return redirect('/admin/meditation-video');
-//         }else{
-//             return redirect()->back();
-//         }
-//     }
 }

@@ -30,6 +30,7 @@ class HomeController extends Controller
 
         $featured_events= CourseStub::with('event')->where('type','featured_events')->limit(20)->get();
         $satories = Satori::get();
+        // dd($satories);
         $sliders = Slider::get();
 
         // dd($featured_events);

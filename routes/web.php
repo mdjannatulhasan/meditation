@@ -29,8 +29,9 @@ Route::get('sessions', 'Frontend\SessionController@index');
 Route::get('session-details/{id}', 'Frontend\SessionDetailController@index');
 Route::get('shop', 'Frontend\ShopController@index');
 Route::get('sleep', 'Frontend\SleepController@index');
-Route::get('meditation/{title}/{id}', 'Frontend\StressController@index');
+Route::get('satori/{title}/{id}', 'Frontend\StressController@index');
 Route::get('tryouts', 'Frontend\TryoutsController@index');
+Route::get('meditation', 'Frontend\MeditationController@index');
 
 
 // signin and signup

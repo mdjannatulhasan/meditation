@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\MeditationTypeRequest;
+use App\Http\Requests\MeditationRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class MeditationTypeCrudController
+ * Class MeditationCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class MeditationTypeCrudController extends CrudController
+class MeditationCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class MeditationTypeCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\MeditationType::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/meditation-type');
-        CRUD::setEntityNameStrings('meditation type', 'meditation types');
+        CRUD::setModel(\App\Models\Meditation::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/meditation');
+        CRUD::setEntityNameStrings('meditation', 'meditations');
     }
 
     /**
@@ -40,6 +40,16 @@ class MeditationTypeCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title');
+        // CRUD::column('meditation_type_id');
+        CRUD::addColumn([
+            'name' => 'meditation_type_id',
+            'entity' => 'meditation_type',
+        ]);
+        // CRUD::column('description');
+        CRUD::column('contribution_fee');
+        CRUD::column('starting_date');
+        CRUD::column('ending_date');
+        CRUD::column('image')->type('image');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -56,9 +66,40 @@ class MeditationTypeCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(MeditationTypeRequest::class);
+        CRUD::setValidation(MeditationRequest::class);
 
         CRUD::field('title');
+        // CRUD::field('meditation_type_id');
+        $this->crud->addField([    // SELECT2
+            'label'         => 'Meditation Type',
+            'type'          => 'select',
+            'name'          => 'meditation_type_id',
+            'entity'        => 'meditation_type',
+            'attribute'     => 'title',
+            // 'model'     => "App\Models\Category",
+        ]);
+        $this->crud->addField(
+            [   // CKEditor
+                'name'          => 'description',
+                'label'         => 'Description',
+                'type'          => 'ckeditor',
+
+                // optional:
+                // 'extra_plugins' => ['oembed', 'widget'],
+                'options'       => [
+                    'autoGrow_minHeight'   => 200,
+                    'autoGrow_bottomSpace' => 50,
+                    'removePlugins'        => 'resize,maximize',
+                ]
+            ]
+        );
+        CRUD::addField([
+            'name' => 'contribution_fee',
+            "type" => "number"
+        ]);
+        CRUD::field('starting_date');
+        CRUD::field('ending_date');
+        CRUD::field('image')->type('image');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

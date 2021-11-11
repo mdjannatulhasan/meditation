@@ -9,12 +9,13 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('gallary') }}'><i class='nav-icon la la-question'></i> Gallaries</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('video') }}'><i class='nav-icon la la-question'></i> Videos</a></li>
-<li class="nav-item"><a class="nav-link" href="{{ backpack_url('elfinder') }}"><i class="nav-icon la la-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>
-
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('meditation-type') }}'><i class='nav-icon la la-question'></i> Meditation types</a></li>
+{{--  <li class="nav-item"><a class="nav-link" href="{{ backpack_url('elfinder') }}"><i class="nav-icon la la-files-o"></i> <span>{{ trans('backpack::crud.file_manager') }}</span></a></li>  --}}
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('tryout') }}'><i class='nav-icon la la-question'></i> Tryouts</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('meditation-video') }}'><i class='nav-icon la la-question'></i> Meditation videos</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('sleep') }}'><i class='nav-icon la la-question'></i> Sleeps</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('sleep-type') }}'><i class='nav-icon la la-question'></i> Sleep types</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('satori') }}'><i class='nav-icon la la-question'></i> Satoris</a></li>
+
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('meditation-type') }}'><i class='nav-icon la la-question'></i> Meditation types</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('meditation') }}'><i class='nav-icon la la-question'></i> Meditations</a></li>
