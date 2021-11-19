@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-3 d-none d-md-block">
-                    <nav class="dacstop-menu">
+                    <nav class="dacstop-menu menu">
                         <ul>
                             <li><a href="#meditations"
                                    class="transition-e tc d-block ps-700 cff s18 capitalize">Meditations</a></li>

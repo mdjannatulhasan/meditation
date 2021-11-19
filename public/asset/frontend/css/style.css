@@ -1325,3 +1325,24 @@ font-size: 22px;
     margin-left: 40px;
     margin-right: 40px;
 }
+
+
+.dacstop-menu ul li a {
+    padding: 8px 20px;
+    
+    border-radius: 4px;
+    z-index: 100;
+}
+.carousel-control-next, .carousel-control-prev{
+    margin: 30px;
+    width: auto !important;
+}
+#up__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+}
+
+img, svg {
+    vertical-align: super;
+}
