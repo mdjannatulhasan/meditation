@@ -15,12 +15,21 @@
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/fonts/fonts.css">
         <!----- CSS HERE ----->
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/bootstrap.min.css" />
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/style.css" />
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/reuseble-code.css" />
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/header.css" />
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/footer.css" />
         <link rel="stylesheet" href="{{ asset('') }}asset/frontend/css/responsive.css" />
+        <style>
+            .carousel-item {
+                height: 500px ;
+            }
+            .carousel-caption {
+                top: 45%;
+                left: 35%;
+            }
+        </style>
 </head>
 
 <body>
@@ -38,7 +47,7 @@
     <!------------ JS HERE ------------>
     @include('frontend.include.script')
 
-
+    <script src="{{ asset('') }}asset/frontend/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 </body>
 
 </html>

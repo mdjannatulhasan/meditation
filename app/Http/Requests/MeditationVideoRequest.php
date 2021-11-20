@@ -27,7 +27,7 @@ class MeditationVideoRequest extends FormRequest
     {
         return [
             // 'name' => 'required|min:5|max:255'
-            'meditation_type_id' => 'required',
+            // 'satori_id' => 'required',
 
         ];
     }

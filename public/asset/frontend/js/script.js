@@ -42,6 +42,20 @@
 				nextEl: '.swiper-next-testi',
 				prevEl: '.swiper-prev-testi',
 			},
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }
 
 		});
 
@@ -130,6 +144,34 @@
 				},
 				992: {
 					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			}
+		});
+		// SLIDER Satori section
+		var swiper = new Swiper('.satori-swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: '.swiper-next-3',
+				prevEl: '.swiper-prev-3',
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
 			}

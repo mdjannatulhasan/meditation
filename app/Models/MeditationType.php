@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Models\Mutators\ImageMutator;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class MeditationType extends Model
 {
-    use CrudTrait, ImageMutator;
+    use CrudTrait;
 
     /*
     |--------------------------------------------------------------------------
@@ -35,6 +34,10 @@ class MeditationType extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
+    public function meditations()
+    {
+        return $this->hasMany(Meditation::class);
+    }
 
     /*
     |--------------------------------------------------------------------------

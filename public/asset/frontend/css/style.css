@@ -1264,16 +1264,85 @@ Back To Top Btn
 /*developer css*/
 
 
-.courses-img .img, .session-img img, .event-img img {
-	
+.courses-img .img, .session-img img, .event-img img, .featured-events-img img {
+
     height: 207px;
     width: 100%;
-	
+    border-radius: 10px;
+
 }
 
-.cd-img img{
-	height: 550px;
-	width:100%;
+/* start Testimonials */
+
+
+.testimonial-img .img {
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+}
+
+.testimonial-text{
+    height: 90px;
+}
+
+.satori-img-title.tc{
+    position: relative;
+    top: -30px;
+}
+.satori-img-title.tc h4{
+    color: #fff !important;
+}
+/* end Testimonials */
+
+
+/* start tryouts */
+/* .tryout .tryouts-video iframe{
+    width: 570px;
+    height: 361px;
+} */
+
+.tryouts-title h4{
+    font-family: Product Sans;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+}
+.tryouts-title p{
+    font-family: Product Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+}
+/* end tryouts */
+
+/* search header */
+.header-search {
+    border: none;
+    background: #F8F8F8;
+    border-radius: 5px;
+}
+.header-nav-menu li{
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 
+.dacstop-menu ul li a {
+    padding: 8px 20px;
+    
+    border-radius: 4px;
+    z-index: 100;
+}
+.carousel-control-next, .carousel-control-prev{
+    margin: 30px;
+    width: auto !important;
+}
+#up__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+}
+
+img, svg {
+    vertical-align: super;
+}

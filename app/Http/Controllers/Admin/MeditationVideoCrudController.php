@@ -40,8 +40,8 @@ class MeditationVideoCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('meditation_type_id');
-        CRUD::column('video_id');
+        CRUD::column('satori_id');
+        CRUD::column('video');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -62,12 +62,13 @@ class MeditationVideoCrudController extends CrudController
 
         // CRUD::field('meditation_type_id');
         $this->crud->addField([    // SELECT2
-            'name' => 'meditation_type_id',
+            'name' => 'satori_id',
             'type' => 'select2',
-            'entity' => 'meditation_type',
+            'entity' => 'satori',
         ]);
 
-        CRUD::field('video_id');
+        CRUD::field('video');
+
 
         // $this->crud->addField([ // select2_from_ajax: 1-n relationship
         //     'type' => 'select2_from_ajax_multiple',
@@ -99,20 +100,4 @@ class MeditationVideoCrudController extends CrudController
         $this->setupCreateOperation();
     }
 
-//     public function store(MeditationVideoRequest $request)
-//     {
-// //        dd($request->event_id);
-//         if ($request->video_id) {
-//             foreach ($request->video_id as $video_id) {
-//                 $existence = MeditationVideo::where(['type' => $request->type, 'video_id' => $video_id])->first();
-//                 if(!$existence){
-//                     $response = MeditationVideo::create(['type' => $request->type, 'meditation_type_id' => $request->meditation_type_id, 'video_id' => $video_id]);
-//                 }
-//             }
-
-//             return redirect('/admin/meditation-video');
-//         }else{
-//             return redirect()->back();
-//         }
-//     }
 }

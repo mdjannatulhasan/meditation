@@ -15,8 +15,9 @@ class CreateSleepsTable extends Migration
     {
         Schema::create('sleeps', function (Blueprint $table) {
             $table->id();
-            $table->string('sleep_type');
-            $table->string('video_id');
+            $table->bigInteger('sleep_type_id')->unsigned();
+            $table->foreign('sleep_type_id')->references('id')->on('sleep_types');
+            $table->string('video');
             $table->timestamps();
         });
     }

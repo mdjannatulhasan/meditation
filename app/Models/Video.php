@@ -34,10 +34,10 @@ class Video extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function meditation_type()
+    public function satori()
     {
 
-        return $this->belongsTo(MeditationType::class);
+        return $this->belongsTo(Satori::class);
     }
 
     /*

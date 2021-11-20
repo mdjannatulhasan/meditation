@@ -40,9 +40,6 @@ class MeditationTypeCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('title');
-        CRUD::column('image')->type('image');
-        CRUD::column('heading');
-        CRUD::column('description');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -62,24 +59,6 @@ class MeditationTypeCrudController extends CrudController
         CRUD::setValidation(MeditationTypeRequest::class);
 
         CRUD::field('title');
-        CRUD::field('image')->type('image');
-        CRUD::field('heading');
-        // CRUD::field('description');
-        $this->crud->addField(
-            [   // CKEditor
-                'name'          => 'description',
-                'label'         => 'Description',
-                'type'          => 'ckeditor',
-
-                // optional:
-                // 'extra_plugins' => ['oembed', 'widget'],
-                'options'       => [
-                    'autoGrow_minHeight'   => 200,
-                    'autoGrow_bottomSpace' => 50,
-                    'removePlugins'        => 'resize,maximize',
-                ]
-            ]
-        );
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

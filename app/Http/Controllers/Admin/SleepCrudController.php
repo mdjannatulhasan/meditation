@@ -39,9 +39,8 @@ class SleepCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('id');
-        CRUD::column('sleep_type');
-        CRUD::column('video_id');
+        CRUD::column('sleep_type_id');
+        CRUD::column('video');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -60,8 +59,12 @@ class SleepCrudController extends CrudController
     {
         CRUD::setValidation(SleepRequest::class);
 
-        CRUD::field('sleep_type');
-        CRUD::field('video_id');
+        $this->crud->addField([    // SELECT2
+            'name' => 'sleep_type_id',
+            'type' => 'select2',
+            'entity' => 'sleep_type',
+        ]);
+        CRUD::field('video');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

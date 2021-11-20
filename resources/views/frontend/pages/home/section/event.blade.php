@@ -1,3 +1,4 @@
+@if(count($upcoming_events) > 0)
 <section class="event-section d-none d-sm-block">
     <div class="container">
         <div class="event-title">
@@ -35,7 +36,7 @@
         </div>
     </div>
 </section>
-
+@endif
 <!--
     ==============================
     Mobail Device Slider

@@ -16,9 +16,6 @@ class CreateMeditationTypesTable extends Migration
         Schema::create('meditation_types', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('image');
-            $table->string('heading');
-            $table->text('description');
             $table->timestamps();
         });
     }

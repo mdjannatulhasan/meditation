@@ -1,62 +1,62 @@
-<section class="satori-section py-100" id="meditations">
-    <div class="container">
-        <div class="satori-title tc">
-            <h2 class="ps-700 s38 c00">Satori Meditations</h2>
-            <p class="ps-400 s20 c42 tc mx-auto">
-                Satori offers meditation, yoga, various transformative courses, meditative
-                therapies, individual sessions as a bridge to meditation which covers body,
-                life issues, creativity, centering, esoteric, mind and emotions.
-            </p>
+
+    <section class="satori-section pt-100" id="meditations">
+        <div class="container p-relative">
+            <div class="satori-title tc">
+                <h2 class="ps-700 s38 c00">Satori Meditations</h2>
+                <p class="ps-400 s20 c42 tc mx-auto">
+                    Satori offers meditation, yoga, various transformative courses, meditative
+                    therapies, individual sessions as a bridge to meditation which covers body,
+                    life issues, creativity, centering, esoteric, mind and emotions.
+                </p>
+            </div>
+
+            <!-- Swiper Slider Start -->
+            <div class="swiper-container satori-swiper-container">
+                <div class="swiper-wrapper swiper-slide-pb">
+                    <div class="swiper-slide">
+                        <div class="  rounded-tt">
+                            <div class="courses-img">
+                                {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
+                                <a href="{{ url('sleep/') }}">
+                                    <img src="{{ asset('/asset/frontend/images/sleep.jpg') }}" alt="courses" class="img">
+                                </a>
+                            </div>
+                            <div class="satori-img-title tc">
+                                <h4 class="ps-700 s20 c22">Sleep</h4>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach ($satories as $satori)
+                    <div class="swiper-slide">
+                        <div class="  rounded-tt">
+                            <div class="courses-img">
+                                {{--  <a href="{{ url('focus', $satori->id) }}">  --}}
+                                <a href="{{ url('satori/'.$satori->title.'/'.$satori->id) }}">
+                                    {{--  href="{{url($row->event->category_id==2 ? 'session-details' : 'course-details',$row->id)}}"   --}}
+                                    <img src="{{ asset($satori->image) }}" alt="courses" class="img">
+                                </a>
+                            </div>
+                            <div class="satori-img-title tc">
+                                <h4 class="ps-700 s20 c22">{{ $satori->title }}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+            </div>
+            <!-- Swiper Slider End -->
+
+            <!-- Swiper Slider Prev Btn -->
+            <div class="swiper-btn courses-swiper-btn d-flex justify-content-between">
+                <button type="button" class="circle d-flex justify-content-center align-items-center swiper-prev-1">
+                    <img src="{{ asset('') }}asset/frontend/svg-icon/arrow-left.svg" alt="arrow right" class="">
+                </button>
+                <button type="button" class="circle d-flex justify-content-center align-items-center swiper-next-1">
+                    <img src="{{ asset('') }}asset/frontend/svg-icon/arrow-right.svg" alt="arrow right" class="">
+                </button>
+            </div>
+
         </div>
-        <div class="row g-3">
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="sleep.html" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s1.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Sleep</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="stress.html" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s2.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Anxiety of stress</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="focuse.html" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s3.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Focus</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="body-yoga.html" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s4.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Body yoga</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="detox.html" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s5.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Detox</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2 col-sm-4 col-6">
-                <a href="javascript:void(0)" class="satori-img d-block">
-                    <img src="{{ asset('') }}asset/frontend/images/s6.png" alt="satori" class="img">
-                    <div class="satori-img-title tc">
-                        <h4 class="ps-700 s20 c22">Indivisual Sessions</h4>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+
